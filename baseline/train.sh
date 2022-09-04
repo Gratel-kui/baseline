@@ -5,9 +5,9 @@ python monobeast.py \
     --entropy_coef 0.001 \
     --clip_ratio 0.2 \
     --num_selfplay_team 8 \
-    --data_reuse 16 \
+    --data_reuse 8 \
     --num_actors 12 \
-    --batch_size 256 \
+    --batch_size 512 \
     --unroll_length 32 \
     --savedir ./results \
     --checkpoint_interval 3600 \

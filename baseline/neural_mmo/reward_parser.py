@@ -42,19 +42,6 @@ class RewardParser:
             # Death fog penalty
             if agent_id in death_fog_damage:
                 r -= death_fog_damage[agent_id] * 0.5
-
-            # # Food/water penalty
-            # if agent_id in food and (food[agent_id] == 0
-            #                          or water[agent_id] == 0):
-            #     r -= 1e-4
-            # # DamageTaken penalty
-            # if step >= CompetitionConfig.HORIZON / 2:
-            #     damage_taken = curr["DamageTaken"] - prev["DamageTaken"]
-            #     if damage_taken > 0:
-            #         r -= (damage_taken * 1e-4)
-            #     else:
-            #         r += 1e-3
-
             reward[agent_id] = r
         return reward
 

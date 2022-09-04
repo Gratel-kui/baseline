@@ -1,5 +1,6 @@
-from neurips2022nmmo import CompetitionConfig, RollOut, scripted
 from pathlib import Path
+
+from neurips2022nmmo import CompetitionConfig, RollOut, scripted
 
 from submission import MonobeastBaseline
 
@@ -8,8 +9,7 @@ def rollout():
     config = CompetitionConfig()
     config.RENDER = False
     config.SAVE_REPLAY = "eval"
-    # checkpoint_path = Path(__file__).parent / "checkpoints" / "model_25600.pt"
-    checkpoint_path = None
+    checkpoint_path = Path(__file__).parent / "checkpoints" / "model_76800.pt"
     my_team = MonobeastBaseline(team_id=f"my-team",
                                 env_config=config,
                                 checkpoint_path=checkpoint_path)

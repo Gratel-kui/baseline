@@ -20,7 +20,7 @@ STATS = [
 N_COLUMN = 3
 
 
-def plot(log_file, window=10):
+def plot(log_file, window=50):
     log_df = pd.read_csv(log_file, sep=",")
     for key in STATS + ["step"]:
         assert key in log_df.columns

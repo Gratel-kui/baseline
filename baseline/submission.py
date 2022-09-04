@@ -68,5 +68,5 @@ class Submission:
     team_klass = MonobeastBaseline
     init_params = {
         "checkpoint_path":
-        Path(__file__).parent / "checkpoints" / "model_xxxxx.pt"
+        Path(__file__).parent / "checkpoints" / "model_76800.pt"
     }
