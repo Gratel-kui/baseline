@@ -360,8 +360,9 @@ def learn(
                                              flags.grad_norm_clipping)
         optimizer.step()
     actor_model.load_state_dict(learner_model.state_dict())
-    episode_returns = batch["episode_return"][batch["done"]]
-    episode_steps = batch["episode_step"][batch["done"]]
+    episode_end = (batch["done"] == True) & (batch["mask"] == True)
+    episode_returns = batch["episode_return"][episode_end]
+    episode_steps = batch["episode_step"][episode_end]
 
     def _reduce(func: Callable, x: torch.Tensor):
         if x.nelement() == 0:
