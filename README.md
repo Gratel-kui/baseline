@@ -53,11 +53,7 @@ The network is implemented as a simple CNN + MLP. See [networks.py](./baseline/n
 We provide a simple design for reward setting, shown as below. See
 [`reward_parser.py`](./baseline/neural_mmo/reward_parser.py) for implementation details.
 
-```math
-R_t = Alive_reward + Defeat_reward + Profession_reward + Equipment_reward - DamageTaken_penalty - Starvation_penalty - Death_penalty
-```
-
-> Note: This reward setting can only let the agent to learn basic abilities, thus you need to optimize it to make the agent survive to the end.
+> R_t = Alive_reward + Defeat_reward + Profession_reward + Equipment_reward - DamageTaken_penalty - Starvation_penalty - Death_penalty
 
 
 ### **Hints for getting stronger agents...**
