@@ -13,7 +13,6 @@ from neural_mmo import FeatureParser, MyMeleeTeam, NMMONet, TrainEnv
 
 
 class MonobeastBaseline(Team):
-
     def __init__(self,
                  team_id: str,
                  env_config: config.Config,

@@ -54,7 +54,7 @@ We provide a simple design for reward setting, shown as below. See
 [`reward_parser.py`](./baseline/neural_mmo/reward_parser.py) for implementation details.
 
 ```math
-R_t = 0.1 * (\Delta_{PlayerDefeats} + \Delta_{MeleeLevel}) + \Delta_{best_ever_equip_level} - 0.005 * \text{death_fog_damage} 
+R_t = Alive_reward + Defeat_reward + Profession_reward + Equipment_reward - DamageTaken_penalty - Starvation_penalty - Death_penalty
 ```
 
 > Note: This reward setting can only let the agent to learn basic abilities, thus you need to optimize it to make the agent survive to the end.
