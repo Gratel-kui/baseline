@@ -6,7 +6,6 @@ pip install -r requirements.txt
 The baseline is based on [monobeast](https://github.com/facebookresearch/). For successful submission, you must copy all files under the directory `baseline/` to [`neurips2022-nmmo-starter-kit/my-submission/`](https://gitlab.aicrowd.com/neural-mmo/neurips2022-nmmo-starter-kit/-/tree/main/my-submission).
 
 
-
 ## Train and evaluation
 ```bash
 cd baseline/
@@ -20,6 +19,13 @@ python plot.py
 # local evaluation
 python eval.py
 ```
+
+## Learning curve
+
+![phase1](phase1.png)
+
+![phase2](phase2.png)
+
 
 ## Implementation Details
 
