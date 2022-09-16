@@ -11,9 +11,9 @@ PROFESSION = ["MeleeLevel"]
 
 
 class RewardParser:
-    def __init__(self, stage: str = "stage1"):
-        assert stage in ["stage1", "stage2"]
-        self.stage = stage
+    def __init__(self, phase: str = "phase1"):
+        assert phase in ["phase1", "phase2"]
+        self.phase = phase
         self.best_ever_equip_level = defaultdict(
             lambda: defaultdict(lambda: 0))
 
@@ -55,8 +55,8 @@ class RewardParser:
             if agent_id in water and water[agent_id] == 0:
                 r -= 0.1
 
-            # Stage2 only
-            if self.stage == "stage2":
+            # phase2 only
+            if self.phase == "phase2":
                 # Death penalty
                 if agent_id in done and done[agent_id]:
                     r -= 5.0

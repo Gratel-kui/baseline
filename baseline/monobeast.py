@@ -65,7 +65,7 @@ parser.add_argument("--num_selfplay_team", default=1, type=int, metavar="T",
                     help="Number of self-play team (default: 1).")
 parser.add_argument("--data_reuse", default=4, type=int, metavar="T",
                     help="Data reuse(default: 4).")
-parser.add_argument("--reward_setting", default="stage1", type=str,
+parser.add_argument("--reward_setting", default="phase1", type=str,
                     help="Reward setting.")
 
 # Loss settings.

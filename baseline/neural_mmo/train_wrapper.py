@@ -23,7 +23,7 @@ class TrainEnv(Wrapper):
         self,
         env: TeamBasedEnv,
         num_selfplay_team: int = 1,
-        reward_setting: str = "stage1",
+        reward_setting: str = "phase1",
     ):
         logging.info(
             f"num_selfplay_team: {num_selfplay_team}, reward_setting: {reward_setting}"
